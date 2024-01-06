@@ -13,22 +13,12 @@ module.exports = function (dbinyectada) {
         return db.todos(TABLA);
     }
 
-    function uno(id) {
-        return db.uno(TABLA, id);
-    }
-
-    function agregar(body) {
-        return db.agregar(TABLA, body);
-    }
-
-    function eliminar(body) {
-        return db.eliminar(TABLA, body);
+    function uno(usuario) {
+        return db.uno(TABLA, usuario);
     }
 
     return {
         todos,
-        uno,
-        agregar,
-        eliminar
+        uno
     }
 }

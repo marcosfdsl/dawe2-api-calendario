@@ -2,7 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const config = require('./config');
 
-const profesor = require('./modulos/profesor/rutas');
+const profesor = require('./modulos/profesores/rutas');
 const error = require('./red/errors')
 
 const app = express();
@@ -16,7 +16,7 @@ app.use(express.urlencoded({extended: true}));
 app.set('port', config.app.port);
 
 // rutas
-app.use('/api/profesor', profesor);
+app.use('/api/profesores', profesor);
 app.use(error);
 
 module.exports = app;
